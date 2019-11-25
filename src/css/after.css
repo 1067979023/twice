@@ -1,0 +1,61 @@
+ .after {
+     width: 100%;
+     height: 78px;
+     background: #f2f2f2;
+     -moz-user-select: none;
+     /*火狐*/
+     -webkit-user-select: none;
+     /*webkit浏览器*/
+     -ms-user-select: none;
+     /*IE10*/
+     -khtml-user-select: none;
+     /*早期浏览器*/
+     user-select: none;
+     cursor: pointer;
+ }
+
+ .after .content {
+     width: 1196px;
+     height: 100%;
+     margin: auto;
+ }
+
+ .after .content ul {
+     display: flex;
+ }
+
+ .after .content ul li {
+     width: 25%;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     font-size: 16px;
+     color: #333;
+     line-height: 78px;
+ }
+
+ .after .content ul li:hover {
+     color: #2884c7;
+ }
+
+ .after .content ul li .bag {
+     width: 36px;
+     height: 36px;
+     margin-right: 16px;
+     border: 1px solid #666;
+     border-radius: 15px;
+     background: url(../img/index/logo1x.png) no-repeat;
+     background-position: 0 -145px;
+ }
+
+ .after .content ul li:nth-child(2) .bag {
+     background-position: -185px -100px;
+ }
+
+ .after .content ul li:nth-child(3) .bag {
+     background-position: -138px -145px;
+ }
+
+ .after .content ul li:nth-child(4) .bag {
+     background-position: -93px -100px;
+ }

@@ -1,0 +1,342 @@
+@charset "utf-8";
+@import 'base';
+
+@font-face {
+    font-family: "icon";
+    src: url('../lib/icon/iconfont.eot?#iefix') format('embedded-opentype'),
+        url('../lib/icon/iconfont.svg#icomoon') format('svg'),
+        url('../lib/icon/iconfont.woff') format('woff'),
+        url('../lib/icon/iconfont.ttf') format('truetype');
+}
+
+.icon {
+    font-family: "icon";
+}
+
+%setdata {
+    width: 100%;
+    height: 100%;
+}
+
+$fff:#fff;
+
+@mixin setH($h:200px) {
+    //设置默认参数：缺点，没有真的整理公共代码
+    width: 100%;
+    height: $h;
+}
+
+@mixin setW($w:200px) {
+    //设置默认参数：缺点，没有真的整理公共代码
+    width: $w;
+    height: 100%;
+}
+
+@mixin setbox($w:200px, $h:200px) {
+    //设置默认参数：缺点，没有真的整理公共代码
+    width: $w;
+    height: $h;
+}
+
+@mixin label() {
+    @include setW(76px);
+    font-size: 12px;
+    color: #888;
+    padding-left: 11px;
+}
+
+#details {
+    .nav {
+        @include setH(40px);
+        border-bottom: 2px solid #011912;
+
+        .content {
+            @include setW(1196px);
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+
+            .nav_left {
+                display: flex;
+
+                .nav_classify {
+                    @include setbox(196px, 40px);
+                    background: #011912;
+                    color: $fff;
+                    font-size: 12px;
+                    line-height: 40px;
+                    text-align: center;
+                    margin-right: 37px;
+
+                    .ic1::after {
+                        content: "\e601";
+                        color: $fff;
+                        margin-right: 6px;
+                        font-size: 16px;
+                    }
+                }
+
+                p {
+                    font-size: 16px;
+                    line-height: 40px;
+                    color: #333;
+                    margin-right: 25px;
+                }
+            }
+
+            .nav_right {
+                font-size: 16px;
+                line-height: 40px;
+                color: #333;
+                padding-left: 20px;
+
+                .ic2::after {
+                    content: "\e682";
+                    margin-right: 5px;
+                }
+            }
+        }
+    }
+
+    .result {
+        @include setH(54px);
+        font-size: 12px;
+        line-height: 54px;
+        color: #333;
+        word-spacing: 5px;
+
+        .content {
+            @include setW(1196px);
+            margin: auto;
+        }
+
+        .ic3::after {
+            content: "\e62c";
+            color: #acacac;
+        }
+    }
+
+    .core {
+        @include setH(545px);
+
+        .content {
+            @include setW(1196px);
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+
+            .magnifying {
+                @include setbox(450px, 545px);
+            }
+
+            .core_text {
+                @include setW(720px);
+
+                .title {
+                    font-size: 20px;
+                    line-height: 20px;
+                    display: flex;
+                    margin-top: 5px;
+                    align-items: center;
+
+                    span:nth-child(1) {
+                        color: $fff;
+                        @include setbox(60px, 20px);
+                        background: #f01e00;
+                        font-size: 12px;
+                        text-align: center;
+                        margin-right: 5px;
+                        border-radius: 3px;
+                    }
+                }
+
+                .promotion {
+                    font-size: 12px;
+                    line-height: 38px;
+                    text-align: end;
+                    color: #333;
+                }
+
+                .price {
+                    @include setH(60px);
+                    font-size: 16px;
+                    line-height: 60px;
+                    color: #c80000;
+                    background: #f9f9f9;
+                    display: flex;
+
+                    .label {
+                        @include setW(76px);
+                        font-size: 12px;
+                        color: #888;
+                        padding-left: 11px;
+                    }
+                }
+
+                .location {
+                    @include setH(32px);
+                    font-size: 12px;
+                    line-height: 32px;
+                    color: #333;
+                    display: flex;
+
+                    .label {
+                        @include label();
+                    }
+                }
+
+                .repertory {
+                    padding-left: 87px;
+                    font-size: 12px;
+                    line-height: 16px;
+                    color: #333;
+                    padding-bottom: 10px;
+                    border-bottom: 1px dashed #f9f9f9;
+
+                    .label {
+                        color: #ff8c00;
+                        padding-right: 10px;
+                    }
+                }
+
+                .type {
+                    @include setH(32px);
+                    font-size: 12px;
+                    line-height: 32px;
+                    color: #f01e00;
+                    display: flex;
+                    margin-top: 10px;
+
+                    .label {
+                        @include label();
+                    }
+
+                    .z_type {
+                        span {
+                            @include setW(76px);
+                            border: 1px solid #f01e00;
+                            display: inline-block;
+                            box-sizing: border-box;
+                            text-align: center;
+                            border-radius: 3px;
+                        }
+                    }
+                }
+
+                .size {
+                    @include setH(32px);
+                    font-size: 12px;
+                    line-height: 32px;
+                    color: #f01e00;
+                    display: flex;
+                    margin-top: 15px;
+
+                    .label {
+                        @include label();
+                    }
+
+                    .z_size {
+                        span {
+                            @include setW(76px);
+                            border: 1px solid #f01e00;
+                            display: inline-block;
+                            box-sizing: border-box;
+                            text-align: center;
+                            border-radius: 3px;
+                        }
+                    }
+                }
+
+                .parts {
+                    @include setH(32px);
+                    font-size: 12px;
+                    line-height: 32px;
+                    color: #f01e00;
+                    display: flex;
+                    margin-top: 15px;
+
+                    .label {
+                        @include label();
+                    }
+
+                    .z_parts {
+                        span {
+                            @include setW(76px);
+                            border: 1px solid #f01e00;
+                            display: inline-block;
+                            box-sizing: border-box;
+                            text-align: center;
+                            border-radius: 3px;
+                        }
+                    }
+                }
+
+                .total {
+                    background: #f9f9f9;
+                    @include setH(50px);
+                    font-size: 12px;
+                    line-height: 50px;
+                    display: flex;
+                    margin-top: 22px;
+
+                    .label {
+                        @include label();
+                    }
+
+                    .z_total {
+                        @include setW(485px);
+                    }
+
+                    .expect {
+                        @include setW(150px);
+                        text-align: center;
+                        background: orangered;
+                        color: #fff;
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+
+        margin-bottom: 42px;
+    }
+
+    .service {
+        @include setH(50px);
+        border-top: 1px solid #ececec;
+        border-bottom: 1px solid #ececec;
+        background: #fff;
+        z-index: 4;
+        position: fixed;
+        top: 900px;
+
+        .content {
+            @include setW(1196px);
+
+            ul {
+                @include setW(615px);
+                display: flex;
+                justify-content: space-around;
+
+                li {
+                    font-size: 16px;
+                    color: #333;
+                    line-height: 48px;
+                    border-bottom: 2px solid $fff;
+                }
+
+                .bor {
+                    border-color: #f01e00;
+                    color: #f01e00;
+                }
+            }
+        }
+    }
+
+    .options {
+        .content {
+            @include setW(1196);
+            margin: auto;
+        }
+    }
+}

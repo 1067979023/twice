@@ -1,0 +1,164 @@
+@charset "utf-8";
+
+body,
+.magnifying ul,
+.magnifying p {
+	padding: 0;
+	margin: 0;
+	-moz-user-select: none;
+	/*火狐*/
+	-webkit-user-select: none;
+	/*webkit浏览器*/
+	-ms-user-select: none;
+	/*IE10*/
+	-khtml-user-select: none;
+	/*早期浏览器*/
+	user-select: none;
+}
+
+.magnifyingul {
+	list-style: none;
+}
+
+.magnifying img {
+	vertical-align: middle;
+	width: 100%;
+	height: 100%;
+}
+
+.magnifying {
+	position: relative;
+}
+
+
+
+
+.magnifying .imgs {
+	display: flex;
+	flex-direction: column;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.magnifying .main {
+	position: relative;
+	overflow: hidden;
+	/* padding: 4px; */
+	width: 448px;
+	height: 448px;
+	border: 1px solid #dadada;
+}
+
+.magnifying .bottom {
+	width: 450px;
+	height: 72px;
+	position: relative;
+	margin: 10px 0;
+}
+
+.magnifying .bottom p {
+	width: 35px;
+	height: 80px;
+	text-align: center;
+	line-height: 72px;
+	background: #eee;
+	/* font-size: 24px; */
+	cursor: no-drop;
+	float: left;
+}
+
+.magnifying .bottom .next {
+	margin-right: 5px;
+	background: #aaa;
+	cursor: pointer;
+}
+
+.magnifying .box {
+	width: 370px;
+	height: 80px;
+	overflow: hidden;
+	position: relative;
+	/* left: 40px;
+	top: 0; */
+	float: left;
+	margin-right: 5px;
+}
+
+/* .bottom .prev{
+	position: absolute;
+	left: 0px;
+	top: 0;
+}
+.bottom .next{
+	position: absolute;
+	right:0 ;
+	top: 0;
+} */
+
+.magnifying .smaller {
+	/* position: relative; */
+	overflow: hidden;
+	display: flex;
+	height: 80px;
+	/* margin-top: 10px; */
+	transition: all 1s;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+
+.magnifying .smaller li {
+	position: relative;
+	float: left;
+	padding: 2px;
+	width: 70px;
+	height: 70px;
+	border: 2px solid #fff;
+	margin-left: 10px;
+	cursor: pointer;
+
+}
+
+.magnifying .smaller li:first-child {
+	margin-left: 0;
+}
+
+.magnifying .smaller .current {
+	border-color: #ff6a00;
+}
+
+.magnifying .biger {
+	position: absolute;
+	overflow: hidden;
+	display: none;
+	left: 460px;
+	top: 0;
+	width: 450px;
+	height: 450px;
+}
+
+.magnifying .mask {
+	position: absolute;
+	display: none;
+	left: 0;
+	top: 0;
+	width: 225px;
+	height: 225px;
+	background: url('../img/detail/mask-bg.png') repeat;
+	cursor: crosshair;
+}
+
+.magnifying .biger img {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 900px;
+	height: 900px;
+}
+
+.magnifying .smaller .active {
+	border: 2px solid red;
+}

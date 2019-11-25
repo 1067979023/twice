@@ -1,0 +1,383 @@
+@charset "UTF-8";
+/*(1)清除默认样式*/
+html,
+body,
+ul,
+li,
+ol,
+dl,
+dd,
+dt,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+form,
+fieldset,
+legend,
+img,
+input {
+  margin: 0;
+  padding: 0;
+}
+
+fieldset,
+img,
+input,
+button {
+  border: 0 none;
+  padding: 0;
+  margin: 0;
+  outline-style: none;
+}
+
+/*去掉input等聚焦时的蓝色边框*/
+ul,
+li,
+ol {
+  list-style: none;
+}
+
+select,
+input {
+  vertical-align: middle;
+}
+
+/*select, input, textarea { font-size:12px; margin:0; }*/
+textarea {
+  resize: none;
+}
+
+/*防止拖动*/
+img {
+  border: 0;
+  vertical-align: middle;
+}
+
+a {
+  text-decoration: none;
+}
+
+/*（2）添加公共样式*/
+/*body {
+    font:12px Arial,Verdana,"\5b8b\4f53";
+    color:#666;
+    background:#fff;
+}*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+  font-size: 1em;
+}
+
+/*设置h标签的大小，设置跟父亲一样大的字体font-size:100%;*/
+s,
+i,
+em {
+  font-style: normal;
+  text-decoration: none;
+}
+
+/* 只要元素需要左浮动就给元素添加一个class名为fl */
+.fl {
+  float: left;
+}
+
+/*只要元素需要右浮动就给元素添加一个class名为fr  */
+.fr {
+  float: right;
+}
+
+.ac {
+  text-align: center;
+}
+
+.f12 {
+  font-size: 12px;
+  line-height: 12px;
+}
+
+.f14 {
+  font-size: 14px;
+  line-height: 14px;
+}
+
+.f16 {
+  font-size: 16px;
+  line-height: 16px;
+}
+
+.f18 {
+  font-size: 18px;
+  line-height: 18px;
+}
+
+.f20 {
+  font-size: 20px;
+  line-height: 20px;
+}
+
+.cf::after {
+  content: "";
+  display: block;
+  overflow: hidden;
+  height: 0;
+  visibility: hidden;
+  clear: both;
+}
+
+@font-face {
+  font-family: "icon";
+  src: url("../lib/icon/iconfont.eot?#iefix") format("embedded-opentype"), url("../lib/icon/iconfont.svg#icomoon") format("svg"), url("../lib/icon/iconfont.woff") format("woff"), url("../lib/icon/iconfont.ttf") format("truetype");
+}
+.icon {
+  font-family: "icon";
+}
+
+#list {
+  width: 100%;
+  -moz-user-select: none;
+  /*火狐*/
+  -webkit-user-select: none;
+  /*webkit浏览器*/
+  -ms-user-select: none;
+  /*IE10*/
+  -khtml-user-select: none;
+  /*早期浏览器*/
+  user-select: none;
+  cursor: pointer;
+}
+#list main {
+  background: #f5f5f5;
+}
+#list main .nav {
+  width: 100%;
+  height: 40px;
+  border-bottom: 2px solid #011912;
+}
+#list main .nav .content {
+  width: 1196px;
+  height: 100%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+}
+#list main .nav .content p:hover {
+  color: #2884c7;
+}
+#list main .nav .content .nav_left {
+  display: flex;
+}
+#list main .nav .content .nav_left .nav_classify {
+  width: 196px;
+  height: 40px;
+  background: #011912;
+  color: #fff;
+  font-size: 12px;
+  line-height: 40px;
+  text-align: center;
+  margin-right: 37px;
+}
+#list main .nav .content .nav_left .nav_classify .ic1::after {
+  content: "\e601";
+  color: #fff;
+  margin-right: 6px;
+  font-size: 16px;
+}
+#list main .nav .content .nav_left p:hover {
+  color: #2884c7;
+}
+#list main .nav .content .nav_left p {
+  font-size: 16px;
+  line-height: 40px;
+  color: #333;
+  margin-right: 25px;
+}
+#list main .nav .content .nav_right {
+  font-size: 16px;
+  line-height: 40px;
+  color: #333;
+  padding-left: 20px;
+}
+#list main .nav .content .nav_right .ic2::after {
+  content: "\e682";
+  margin-right: 5px;
+}
+#list main .result {
+  width: 100%;
+  height: 54px;
+  font-size: 12px;
+  line-height: 54px;
+  color: #333;
+  word-spacing: 5px;
+}
+#list main .result .content {
+  width: 1196px;
+  height: 100%;
+  border-bottom: 1px solid #eee;
+}
+#list main .result .ic3::after {
+  content: "\e62c";
+  color: #acacac;
+}
+#list main .paging {
+  width: 100%;
+  height: 40px;
+}
+#list main .paging .content {
+  width: 1196px;
+  height: 100%;
+  display: flex;
+  font-size: 12px;
+  color: #333;
+  line-height: 40px;
+  border-bottom: 1px solid #eee;
+}
+#list main .paging .content li {
+  width: 100px;
+  height: 100%;
+  text-align: center;
+}
+#list main .sort {
+  width: 100%;
+  height: 50px;
+}
+#list main .sort .content {
+  width: 1196px;
+  height: 100%;
+  display: flex;
+  font-size: 12px;
+  color: #969696;
+  line-height: 40px;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  align-items: center;
+}
+#list main .sort .content li {
+  height: 12px;
+  padding: 0 42px;
+  line-height: 12px;
+  border-left: 1px solid #d6cdde;
+}
+#list main .sort .content li:nth-child(1) {
+  padding-left: 0;
+  border-left: none;
+}
+#list main .sort .content .col {
+  color: #d80c18;
+}
+#list main .main_list {
+  width: 100%;
+  margin-top: 20px;
+}
+#list main .main_list .content .shop {
+  float: left;
+  width: 228px;
+  height: 410px;
+  display: flex;
+  margin-right: 8px;
+  flex-direction: column;
+  align-items: center;
+  background: #fff;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 12px;
+  border: 1px solid #f5f5f5;
+}
+#list main .main_list .content .shop:hover {
+  border-color: #c80000;
+}
+#list main .main_list .content .shop:hover .buy {
+  background: #c80000;
+  color: #fff;
+}
+#list main .main_list .content .shop img {
+  width: 160px;
+  height: 160px;
+  margin-top: 40px;
+}
+#list main .main_list .content .shop .title {
+  font-size: 12px;
+  line-height: 12px;
+  align-self: flex-start;
+  padding-left: 21px;
+  color: #333;
+  font-weight: 600;
+  margin-top: 50px;
+  text-align: center;
+  padding: 0 10px;
+}
+#list main .main_list .content .shop .price {
+  font-size: 12px;
+  line-height: 12px;
+  margin-top: 30px;
+  align-self: flex-start;
+  padding-left: 21px;
+  color: #ed1c24;
+}
+#list main .main_list .content .shop .evaluate {
+  padding: 0 21px;
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 12px;
+  line-height: 12px;
+  margin-top: 11px;
+  color: #666;
+  display: flex;
+  justify-content: space-between;
+}
+#list main .main_list .content .shop .buy {
+  line-height: 32px;
+  border-top: 1px solid #eee;
+  color: #ed1c24;
+  font-size: 12px;
+  margin: 0 auto;
+  text-align: center;
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+  right: 0;
+}
+#list main .dataTables {
+  width: 100%;
+}
+#list main .dataTables .content {
+  width: 1196px;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+#list main .dataTables .content .prev {
+  width: 40px;
+  font-size: 14px;
+  line-height: 36px;
+  text-align: center;
+}
+#list main .dataTables .content .data_paging {
+  display: flex;
+}
+#list main .dataTables .content .data_paging a {
+  width: 40px;
+  font-size: 14px;
+  line-height: 36px;
+  text-align: center;
+  color: #666;
+}
+#list main .dataTables .content .data_paging .active {
+  color: red;
+}
+#list main .dataTables .content .next {
+  width: 40px;
+  font-size: 14px;
+  line-height: 36px;
+  text-align: center;
+}
+
+/*# sourceMappingURL=list.css.map */

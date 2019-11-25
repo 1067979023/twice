@@ -1,0 +1,72 @@
+{
+  "id": "1506338",
+  "name": "二阶段项目;",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "995974",
+      "name": "共享",
+      "font_class": "gongxiang",
+      "unicode": "e664",
+      "unicode_decimal": 58980
+    },
+    {
+      "icon_id": "1166460",
+      "name": "购物车 ",
+      "font_class": "gouwuche2",
+      "unicode": "e62d",
+      "unicode_decimal": 58925
+    },
+    {
+      "icon_id": "1630001",
+      "name": "回到顶部",
+      "font_class": "huidaodingbu",
+      "unicode": "e6a9",
+      "unicode_decimal": 59049
+    },
+    {
+      "icon_id": "3217799",
+      "name": "分类",
+      "font_class": "icon-",
+      "unicode": "e601",
+      "unicode_decimal": 58881
+    },
+    {
+      "icon_id": "6318181",
+      "name": "错",
+      "font_class": "cuo",
+      "unicode": "e60b",
+      "unicode_decimal": 58891
+    },
+    {
+      "icon_id": "7310413",
+      "name": "向左",
+      "font_class": "xiangzuo",
+      "unicode": "e74b",
+      "unicode_decimal": 59211
+    },
+    {
+      "icon_id": "7351915",
+      "name": "客服，咨询",
+      "font_class": "huaban-",
+      "unicode": "e682",
+      "unicode_decimal": 59010
+    },
+    {
+      "icon_id": "8675193",
+      "name": "向右",
+      "font_class": "xiangyou",
+      "unicode": "e62c",
+      "unicode_decimal": 58924
+    },
+    {
+      "icon_id": "11391508",
+      "name": "对",
+      "font_class": "dui",
+      "unicode": "e636",
+      "unicode_decimal": 58934
+    }
+  ]
+}

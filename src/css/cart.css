@@ -1,0 +1,59 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.top {
+    width: 100%;
+    height: 120px;
+}
+
+.top .content {
+    width: 990px;
+    text-align: center;
+}
+
+.cart_shop {
+    width: 100%;
+}
+
+.cart_shop .content {
+    width: 990px;
+    margin: auto;
+}
+
+.cart_shop .content table {
+    width: 100%;
+    border: 1px solid #ececec;
+    border-spacing: 0;
+}
+
+thead tr {
+    width: 100%;
+    height: 38px;
+    background: #f9f9f9;
+}
+
+thead th {
+    width: 110px;
+    text-align: center;
+}
+
+th:nth-child(2) {
+    width: 440px;
+}
+
+tbody {
+    width: 100%;
+
+}
+
+tbody tr {
+    height: 95px;
+
+}
+
+tbody tr:nth-child(1) {
+    height: 35px;
+    border-bottom: 1px solid #ececec;
+}

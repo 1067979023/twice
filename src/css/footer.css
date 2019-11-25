@@ -1,0 +1,117 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+footer {
+    width: 100%;
+    height: 276px;
+    background: #151515;
+    color: #888;
+    -moz-user-select: none;
+    /*火狐*/
+    -webkit-user-select: none;
+    /*webkit浏览器*/
+    -ms-user-select: none;
+    /*IE10*/
+    -khtml-user-select: none;
+    /*早期浏览器*/
+    user-select: none;
+    cursor: pointer;
+}
+
+footer .content {
+    width: 1196px;
+    height: 100%;
+    margin: auto;
+}
+
+footer .content .footer_top {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 223px;
+    border-bottom: 1px solid #373737;
+}
+
+footer .content .footer_top .footer_t_l {
+    display: flex;
+}
+
+footer .content .footer_top .footer_t_l dl {
+    width: 200px;
+    box-sizing: border-box;
+    padding-left: 58px;
+}
+
+footer .content .footer_top .footer_t_l dl dt {
+    font-size: 12px;
+    line-height: 12px;
+    margin-top: 37px;
+    margin-bottom: 16px;
+    color: #c4c2c2;
+}
+
+footer .content .footer_top .footer_t_l dl dd:hover {
+    color: #2884c7;
+}
+
+footer .content .footer_top .footer_t_l dl dd {
+    font-size: 12px;
+    line-height: 12px;
+    margin-bottom: 11px;
+}
+
+footer .content .footer_top .footer_t_r {
+    width: 328px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer .content .footer_top .footer_t_r .num {
+    margin-top: 36px;
+    font-size: 20px;
+    line-height: 18px;
+    color: #f05353;
+}
+
+footer .content .footer_top .footer_t_r .btn {
+    width: 156px;
+    height: 32px;
+    line-height: 32px;
+    font-size: 14px;
+    text-align: center;
+    background: #2d2c2d;
+    border: 1px solid #575756;
+    color: #fff;
+    margin-top: 15px;
+}
+
+footer .content .footer_top .footer_t_r .btn:hover {
+    background: #666;
+}
+
+footer .content .footer_top .footer_t_r .phone {
+    font-size: 12px;
+    line-height: 12px;
+    margin-top: 12px;
+    margin-bottom: 15px;
+    color: #fff;
+}
+
+footer .content .footer_top .footer_t_r .text {
+    margin-bottom: 5px;
+    font-size: 12px;
+    line-height: 12px;
+}
+
+footer .content .footer_bottom p {
+    font-size: 12px;
+    line-height: 12px;
+    margin-top: 11px;
+    text-align: center;
+}
+
+/*# sourceMappingURL=index.css.map */

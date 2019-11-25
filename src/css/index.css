@@ -1,0 +1,814 @@
+@charset "UTF-8";
+/*(1)清除默认样式*/
+html,
+body,
+ul,
+li,
+ol,
+dl,
+dd,
+dt,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+form,
+fieldset,
+legend,
+img,
+input {
+  margin: 0;
+  padding: 0;
+}
+
+fieldset,
+img,
+input,
+button {
+  border: 0 none;
+  padding: 0;
+  margin: 0;
+  outline-style: none;
+}
+
+/*去掉input等聚焦时的蓝色边框*/
+ul,
+li,
+ol {
+  list-style: none;
+}
+
+select,
+input {
+  vertical-align: middle;
+}
+
+/*select, input, textarea { font-size:12px; margin:0; }*/
+textarea {
+  resize: none;
+}
+
+/*防止拖动*/
+img {
+  border: 0;
+  vertical-align: middle;
+}
+
+a {
+  text-decoration: none;
+}
+
+/*（2）添加公共样式*/
+/*body {
+    font:12px Arial,Verdana,"\5b8b\4f53";
+    color:#666;
+    background:#fff;
+}*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+  font-size: 1em;
+}
+
+/*设置h标签的大小，设置跟父亲一样大的字体font-size:100%;*/
+s,
+i,
+em {
+  font-style: normal;
+  text-decoration: none;
+}
+
+/* 只要元素需要左浮动就给元素添加一个class名为fl */
+.fl {
+  float: left;
+}
+
+/*只要元素需要右浮动就给元素添加一个class名为fr  */
+.fr {
+  float: right;
+}
+
+.ac {
+  text-align: center;
+}
+
+.f12 {
+  font-size: 12px;
+  line-height: 12px;
+}
+
+.f14 {
+  font-size: 14px;
+  line-height: 14px;
+}
+
+.f16 {
+  font-size: 16px;
+  line-height: 16px;
+}
+
+.f18 {
+  font-size: 18px;
+  line-height: 18px;
+}
+
+.f20 {
+  font-size: 20px;
+  line-height: 20px;
+}
+
+.cf::after {
+  content: "";
+  display: block;
+  overflow: hidden;
+  height: 0;
+  visibility: hidden;
+  clear: both;
+}
+
+@font-face {
+  font-family: "icon";
+  src: url("../lib/icon/iconfont.eot?#iefix") format("embedded-opentype"), url("../lib/icon/iconfont.svg#icomoon") format("svg"), url("../lib/icon/iconfont.woff") format("woff"), url("../lib/icon/iconfont.ttf") format("truetype");
+}
+.icon {
+  font-family: "icon";
+}
+
+#lemall main .content .supertv .super_list .super_list_advert img, #lemall main .content .parts .parts_bottom .parts_advert img, #lemall main .content .life .life_bottom .life_advert img {
+  width: 100%;
+  height: 100%;
+}
+
+#lemall {
+  width: 100%;
+  -moz-user-select: none;
+  /*火狐*/
+  -webkit-user-select: none;
+  /*webkit浏览器*/
+  -ms-user-select: none;
+  /*IE10*/
+  -khtml-user-select: none;
+  /*早期浏览器*/
+  user-select: none;
+  cursor: pointer;
+}
+#lemall .content {
+  position: relative;
+  width: 1196px;
+  height: 100%;
+  margin: auto;
+}
+#lemall .banner {
+  width: 100%;
+  height: 420px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+}
+#lemall .banner .carousel {
+  overflow: hidden;
+  position: absolute;
+  display: flex;
+  left: 0;
+}
+#lemall .banner .carousel p {
+  text-align: center;
+  background: #9c0e04;
+}
+#lemall .banner .carousel p:nth-child(2) {
+  background: #bdb8b2;
+}
+#lemall .banner .carousel p:nth-child(3) {
+  background: #fae7d8;
+}
+#lemall .banner .carousel p:nth-child(4) {
+  background: #fb2233;
+}
+#lemall .banner .carousel p:nth-child(5) {
+  background: #1682c0;
+}
+#lemall .banner .carousel p img {
+  width: 1196px;
+  height: 100%;
+}
+#lemall .banner .follow {
+  width: 280px;
+  height: 4px;
+  position: absolute;
+  z-index: 4;
+  bottom: 4px;
+  display: flex;
+  justify-content: space-between;
+}
+#lemall .banner .follow span {
+  width: 48px;
+  height: 4;
+  background: #552d2b;
+  opacity: .5;
+}
+#lemall .banner .follow .active {
+  background: #2884c7;
+}
+#lemall .banner .content {
+  position: relative;
+}
+#lemall .banner .content #prev {
+  position: absolute;
+  top: 0;
+  left: 196px;
+  width: 50px;
+  height: 420px;
+  font-size: 30px;
+  line-height: 420px;
+  text-align: center;
+  color: #fff;
+}
+#lemall .banner .content .ic4::after {
+  content: "\e74b";
+}
+#lemall .banner .content .ic5::after {
+  content: "\e62c";
+}
+#lemall .banner .content #next {
+  position: absolute;
+  top: 0;
+  right: 238px;
+  width: 50px;
+  height: 420px;
+  font-size: 30px;
+  line-height: 420px;
+  text-align: center;
+  color: #fff;
+}
+#lemall .banner .content nav {
+  width: 196px;
+  height: 100%;
+  background: rgba(6, 30, 41, 0.7);
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 5;
+}
+#lemall .banner .content nav .nav {
+  width: 100%;
+  height: 384px;
+  margin-top: 18px;
+}
+#lemall .banner .content nav .nav li {
+  width: 100%;
+  height: 64px;
+  color: #fff;
+  font-size: 12px;
+  line-height: 64px;
+  box-sizing: border-box;
+  padding: 0 23px;
+  display: flex;
+  justify-content: space-between;
+}
+#lemall .banner .content nav .nav li .ic2::after {
+  content: "\e62c";
+  color: #fff;
+}
+#lemall .banner .content nav .menu2 {
+  width: 1000px;
+  height: 100%;
+  background: #fff;
+  position: absolute;
+  left: 196px;
+  top: 0;
+  display: none;
+}
+#lemall .banner .content nav .menu2 img {
+  width: 45px;
+  height: 45px;
+  margin: 15px;
+}
+#lemall .banner .content .banner_login {
+  width: 238px;
+  height: 404px;
+  background: #fbf4f4;
+  position: absolute;
+  right: 0;
+  top: 8px;
+}
+#lemall .banner .content .banner_login .login_top {
+  width: 226px;
+  height: 192px;
+  border-bottom: 1px solid #e6e6e6;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#lemall .banner .content .banner_login .login_top .photo {
+  width: 62px;
+  height: 62px;
+  background: url(../img/index/default.jpg);
+  background-size: 100% 100%;
+  border-radius: 50%;
+  margin-top: 24px;
+}
+#lemall .banner .content .banner_login .login_top h3 {
+  margin-top: 8px;
+  margin-bottom: 6px;
+  color: #333;
+}
+#lemall .banner .content .banner_login .login_top p {
+  width: 210px;
+  height: 30px;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 10px;
+}
+#lemall .banner .content .banner_login .login_top p a {
+  font-size: 12px;
+  color: #fff;
+  width: 98px;
+  height: 100%;
+  border-radius: 4px;
+  background: #ccc;
+  text-align: center;
+  line-height: 30px;
+}
+#lemall .banner .content .banner_login .login_top p .login {
+  background: #2884c7;
+}
+#lemall .banner .content .banner_login dl {
+  margin-top: 24px;
+  padding: 0 14px;
+  color: #333;
+  font-size: 12px;
+  line-height: 12px;
+}
+#lemall .banner .content .banner_login dl dt {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+#lemall .banner .content .banner_login dl dt h2 {
+  font-weight: bold;
+}
+#lemall .banner .content .banner_login dl dt a {
+  font-size: 12px;
+  line-height: 12px;
+  color: #999;
+}
+#lemall .banner .content .banner_login dl dd {
+  margin-bottom: 13px;
+}
+#lemall main {
+  background: #f2f2f2;
+}
+#lemall main .content {
+  border-top: 1px solid #f2f2f2;
+}
+#lemall main .content .main_advert {
+  width: 100%;
+  height: 140px;
+  margin-top: 12px;
+  display: flex;
+  justify-content: space-between;
+}
+#lemall main .content .main_advert img {
+  width: 238px;
+  height: 140px;
+}
+#lemall main .content .main_advert img:nth-child(1) {
+  width: 196px;
+}
+#lemall main .content .supertv {
+  width: 100%;
+  height: 800px;
+  margin-top: 24px;
+}
+#lemall main .content .supertv .super_title {
+  display: flex;
+  justify-content: space-between;
+}
+#lemall main .content .supertv .super_title .super_title_left {
+  display: flex;
+}
+#lemall main .content .supertv .super_title .super_title_left h3 {
+  font-weight: 600;
+  font-size: 20px;
+  padding-right: 15px;
+  margin-right: 15px;
+  line-height: 20px;
+  border-right: 2px solid #000;
+}
+#lemall main .content .supertv .super_title .super_title_left p {
+  font-size: 12px;
+  line-height: 20px;
+  color: #333;
+}
+#lemall main .content .supertv .super_title .super_title_right a {
+  font-size: 12px;
+  line-height: 20px;
+  color: #333;
+  padding: 0 15px;
+  border-right: 1px solid #333;
+}
+#lemall main .content .supertv .super_title .super_title_right span {
+  font-size: 12px;
+  line-height: 20px;
+  color: #333;
+  padding: 0 15px;
+}
+#lemall main .content .supertv .super_list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 11px;
+}
+#lemall main .content .supertv .super_list .super_list_advert {
+  width: 592px;
+  height: 370px;
+  margin-bottom: 12px;
+}
+#lemall main .content .supertv .super_list .list_shop {
+  width: 290px;
+  height: 370px;
+  margin-bottom: 12px;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+#lemall main .content .supertv .super_list .list_shop:hover .super_price {
+  display: none;
+}
+#lemall main .content .supertv .super_list .list_shop:hover strong {
+  bottom: 30px;
+  transition: all 1s;
+}
+#lemall main .content .supertv .super_list .list_shop:hover img {
+  width: 242px;
+  transform: translateZ(-20px);
+  transition: all .5s;
+}
+#lemall main .content .supertv .super_list .list_shop .super_header {
+  width: 150px;
+  height: 20px;
+  margin-top: 4px;
+  display: flex;
+  justify-content: space-between;
+}
+#lemall main .content .supertv .super_list .list_shop .super_header span {
+  width: 72px;
+  font-size: 12px;
+  line-height: 20px;
+  color: #fff;
+  background: #3ece17;
+  text-align: center;
+  border-radius: 3px;
+}
+#lemall main .content .supertv .super_list .list_shop .super_header .hot {
+  background: #f2a705;
+}
+#lemall main .content .supertv .super_list .list_shop img {
+  width: 238px;
+  height: 238px;
+}
+#lemall main .content .supertv .super_list .list_shop h3 {
+  font-size: 12px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+#lemall main .content .supertv .super_list .list_shop .list_title {
+  color: #999;
+  font-size: 12px;
+  line-height: 12px;
+  margin-bottom: 12px;
+}
+#lemall main .content .supertv .super_list .list_shop .super_price {
+  width: 92px;
+  font-size: 12px;
+  line-height: 12px;
+  color: #999;
+  display: flex;
+  justify-content: space-between;
+}
+#lemall main .content .supertv .super_list .list_shop .super_price span {
+  color: #ed1c24;
+}
+#lemall main .content .supertv .super_list .list_shop strong {
+  height: 32px;
+  width: 100%;
+  position: absolute;
+  bottom: -32px;
+  left: 0;
+  display: flex;
+  justify-content: center;
+}
+#lemall main .content .supertv .super_list .list_shop strong p {
+  width: 98px;
+  height: 32px;
+  font-size: 14px;
+  line-height: 32px;
+  color: #fff;
+  border-radius: 4px;
+  background: #2884c7;
+  text-align: center;
+}
+#lemall main .content .supertv .super_list .list_shop strong .buy {
+  background: #ed1c24;
+  margin-left: 20px;
+}
+#lemall main .content .parts {
+  width: 100%;
+  height: 671px;
+}
+#lemall main .content .parts .parts_title {
+  display: flex;
+  justify-content: space-between;
+}
+#lemall main .content .parts .parts_title .parts_title_left {
+  display: flex;
+}
+#lemall main .content .parts .parts_title .parts_title_left h3 {
+  font-weight: 600;
+  font-size: 20px;
+  padding-right: 15px;
+  margin-right: 15px;
+  line-height: 20px;
+  border-right: 2px solid #000;
+}
+#lemall main .content .parts .parts_title .parts_title_left p {
+  font-size: 12px;
+  line-height: 20px;
+  color: #333;
+}
+#lemall main .content .parts .parts_title .parts_title_right a {
+  font-size: 12px;
+  line-height: 20px;
+  color: #333;
+  padding: 0 15px;
+  border-right: 1px solid #333;
+}
+#lemall main .content .parts .parts_title .parts_title_right span {
+  font-size: 12px;
+  line-height: 20px;
+  color: #333;
+  padding: 0 15px;
+}
+#lemall main .content .parts .parts_bottom {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 11px;
+}
+#lemall main .content .parts .parts_bottom .parts_advert {
+  width: 236px;
+  height: 608px;
+}
+#lemall main .content .parts .parts_bottom .parts_list {
+  width: 948px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  position: relative;
+}
+#lemall main .content .parts .parts_bottom .parts_list li {
+  width: 228px;
+  height: 298px;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 12px;
+  position: relative;
+  overflow: hidden;
+}
+#lemall main .content .parts .parts_bottom .parts_list li:hover .price {
+  display: none;
+}
+#lemall main .content .parts .parts_bottom .parts_list li:hover strong {
+  bottom: 30px;
+  transition: all 1s;
+}
+#lemall main .content .parts .parts_bottom .parts_list li:hover img {
+  width: 155px;
+  transform: translateZ(-20px);
+  transition: all .5s;
+}
+#lemall main .content .parts .parts_bottom .parts_list li img {
+  width: 150px;
+  height: 150px;
+  margin-top: 29px;
+}
+#lemall main .content .parts .parts_bottom .parts_list li h3 {
+  font-size: 12px;
+  line-height: 12px;
+  margin-top: 15px;
+  font-weight: 600;
+}
+#lemall main .content .parts .parts_bottom .parts_list li .title {
+  margin-top: 9px;
+  font-size: 12px;
+  line-height: 12px;
+  color: #999;
+}
+#lemall main .content .parts .parts_bottom .parts_list li .price {
+  font-size: 12px;
+  line-height: 12px;
+  color: #ee1c24;
+  margin-top: 14px;
+}
+#lemall main .content .parts .parts_bottom .parts_list li strong {
+  width: 98px;
+  height: 30px;
+  font-size: 12px;
+  line-height: 30px;
+  color: #fff;
+  border-radius: 4px;
+  background: #ed1c24;
+  text-align: center;
+  position: absolute;
+  bottom: -30px;
+}
+#lemall main .content .life {
+  width: 100%;
+  height: 671px;
+}
+#lemall main .content .life .life_title {
+  display: flex;
+  justify-content: space-between;
+}
+#lemall main .content .life .life_title .life_title_left {
+  display: flex;
+}
+#lemall main .content .life .life_title .life_title_left h3 {
+  font-weight: 600;
+  font-size: 20px;
+  padding-right: 15px;
+  margin-right: 15px;
+  line-height: 20px;
+  border-right: 2px solid #000;
+}
+#lemall main .content .life .life_title .life_title_left p {
+  font-size: 12px;
+  line-height: 20px;
+  color: #333;
+}
+#lemall main .content .life .life_title .life_title_right a {
+  font-size: 12px;
+  line-height: 20px;
+  color: #333;
+  padding: 0 15px;
+  border-right: 1px solid #333;
+}
+#lemall main .content .life .life_title .life_title_right span {
+  font-size: 12px;
+  line-height: 20px;
+  color: #333;
+  padding: 0 15px;
+}
+#lemall main .content .life .life_bottom {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 11px;
+}
+#lemall main .content .life .life_bottom .life_advert {
+  width: 236px;
+  height: 608px;
+}
+#lemall main .content .life .life_bottom .life_list {
+  width: 948px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  position: relative;
+}
+#lemall main .content .life .life_bottom .life_list li {
+  width: 228px;
+  height: 298px;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 12px;
+  position: relative;
+  overflow: hidden;
+}
+#lemall main .content .life .life_bottom .life_list li:hover .price {
+  display: none;
+}
+#lemall main .content .life .life_bottom .life_list li:hover strong {
+  bottom: 30px;
+  transition: all 1s;
+}
+#lemall main .content .life .life_bottom .life_list li:hover img {
+  width: 155px;
+  transform: translateZ(-20px);
+  transition: all .5s;
+}
+#lemall main .content .life .life_bottom .life_list li img {
+  width: 150px;
+  height: 150px;
+  margin-top: 29px;
+}
+#lemall main .content .life .life_bottom .life_list li h3 {
+  font-size: 12px;
+  line-height: 12px;
+  margin-top: 15px;
+  font-weight: 600;
+}
+#lemall main .content .life .life_bottom .life_list li .title {
+  margin-top: 9px;
+  font-size: 12px;
+  line-height: 12px;
+  color: #999;
+}
+#lemall main .content .life .life_bottom .life_list li .price {
+  font-size: 12px;
+  line-height: 12px;
+  color: #ee1c24;
+  margin-top: 14px;
+}
+#lemall main .content .life .life_bottom .life_list li strong {
+  width: 98px;
+  height: 30px;
+  font-size: 12px;
+  line-height: 30px;
+  color: #fff;
+  border-radius: 4px;
+  background: #ed1c24;
+  text-align: center;
+  position: absolute;
+  bottom: -30px;
+}
+#lemall main .content .main_list {
+  width: 100%;
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+#lemall main .content .main_list .shop {
+  width: 228px;
+  height: 298px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #fff;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 12px;
+}
+#lemall main .content .main_list .shop:hover .price {
+  display: none;
+}
+#lemall main .content .main_list .shop:hover .buy {
+  bottom: 30px;
+  transition: all 1s;
+}
+#lemall main .content .main_list .shop:hover img {
+  width: 165px;
+  transform: translateZ(-20px);
+  transition: all .5s;
+}
+#lemall main .content .main_list .shop img {
+  width: 160px;
+  height: 160px;
+  margin-top: 24px;
+}
+#lemall main .content .main_list .shop .title {
+  font-size: 12px;
+  line-height: 12px;
+  padding: 0 10px;
+  text-align: center;
+  color: #333;
+  font-weight: 600;
+  margin-top: 8px;
+}
+#lemall main .content .main_list .shop .price {
+  font-size: 12px;
+  line-height: 12px;
+  margin-top: 13px;
+  color: #ed1c24;
+}
+#lemall main .content .main_list .shop .buy {
+  width: 98px;
+  height: 32px;
+  line-height: 32px;
+  background-color: #ed1c24;
+  color: #fff;
+  border-radius: 5px;
+  font-size: 12px;
+  margin: 0 auto;
+  text-align: center;
+  position: absolute;
+  bottom: -32px;
+}
+
+/*# sourceMappingURL=index.css.map */
